@@ -20,6 +20,13 @@
             &:last-child
                 margin-left: auto
 
+            img
+                transition: all ease .3s
+
+                &:hover
+                    animation-delay: 0 !important
+                    transform: scale(1.1) !important
+
     &__phunt
         max-width: 47%
         max-height: 63vh
@@ -48,14 +55,16 @@
         gap: 0 4%
         a
             display: block
-            border-radius: 10px
-            padding: 12px 10px 8px 15px
             max-width: 30%
             img
+                border-radius: 10px
+                padding: 12px 10px 8px 15px
                 display: block
-
-            &:hover
-                background-color: rgba(228, 150, 190, 0.5)
+                transition: all ease .3s
+                &:hover
+                    animation-delay: 0 !important
+                    transform: scale(1.1) !important
+                    background-color: rgba(228, 150, 190, 0.5)
 
     @media screen and ( max-width: 1000px )
         padding: 10px 10px 30px
@@ -183,7 +192,7 @@
             transform: translateX(-52%)
 
 .tekenomics
-    padding: 80px 50px 40px
+    padding: 10px 50px 20px
     position: relative
     overflow: hidden
     z-index: 1
@@ -198,13 +207,13 @@
     &__heading
         display: block
         width: 50%
-        margin: 0 0 0 auto
+        margin: 60px 0 0 auto
 
     &__phunt
         position: absolute
         bottom: 0
         left: 0
-        width: 45%
+        width: 44%
         height: 88%
         object-fit: contain
         object-position: center bottom
@@ -217,7 +226,7 @@
 
     &__text
         display: block
-        max-width: 75%
+        max-width: 74%
         margin: 0 auto
 
     &__sculp
@@ -257,7 +266,7 @@
             display: none
 
         &__palm
-            top: auto 
+            top: auto
             bottom: 43vw
             max-width: 30%
 
