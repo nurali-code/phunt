@@ -9,9 +9,11 @@
     flex-direction: column
     position: relative
     z-index: 1
+    min-height: 100vh
+    overflow: hidden
 
     nav
-        gap: 4%
+        gap: 3%
         a
             display: block
             max-width: 15%
@@ -19,18 +21,22 @@
                 margin-left: auto
 
     &__phunt
-        max-width: 40%
-        margin: 0 auto
+        max-width: 47%
+        max-height: 63vh
+        object-fit: contain
+        margin: auto
 
     &__palm
         position: absolute
-        bottom: 5%
+        z-index: -1
+        bottom: 10%
         left: 0
-        max-width: 18%
+        max-width: 21%
         max-height: 60%
         object-fit: contain
         object-position: left bottom
         &.right
+            max-width: 19%
             left: auto
             right: 0
             bottom: 18%
@@ -39,7 +45,7 @@
     .links
         max-width: 25%
         margin: 0 auto
-        gap: 0 2%
+        gap: 0 4%
         a
             display: block
             border-radius: 10px
@@ -51,15 +57,58 @@
             &:hover
                 background-color: rgba(228, 150, 190, 0.5)
 
+    @media screen and ( max-width: 1000px )
+        padding: 10px 10px 30px
+        nav
+            gap: 0
+            width: 103%
+            margin: 0 0 0 auto
+            a
+                width: 33.3%
+                max-width: 180px
+
+        &__phunt
+            width: 100%
+            max-width: 500px
+            position: relative
+            left: 2%
+
+        &__palm
+            max-width: 48%
+            bottom: 51%
+            width: 40%
+            max-height: 30%
+            max-width: 200px
+            &.right
+                width: 41%
+                max-width: 200px
+                bottom: 20%
+
+        .links
+            width: 90%
+            max-width: 400px
+
 .partners
-    max-width: 50%
-    margin: 10px auto
+    max-width: 60%
+    margin: 0 auto 40px
     img
         display: block
         max-width: 32%
         transition: all ease .3s
         &:hover
             transform: scale(1.1)
+
+    @media screen and ( max-width: 1000px )
+        flex-wrap: wrap
+        max-width: 90%
+        justify-content: center
+
+        img
+            max-width: 49%
+            max-height: 13vw
+            order: 1
+            &:nth-child(2)
+                order: 3
 
 .about
     padding: 20px 40px 30vw
@@ -106,13 +155,39 @@
         transform: translateX(-50%)
         z-index: -1
 
+    @media screen and ( max-width: 1000px )
+        padding: 10px 10px 40vw 4vw
+        // min-height: 100vh
+
+        &__heading
+            transform: rotateZ(27deg) translate(-3vw, 4vw)
+
+        .col
+            width: 100%
+            max-width: 100%
+            margin: 0 auto
+
+        &__text
+            margin: 0
+            max-width: 65vw
+            bottom: 16vw
+            font-size: 4vw
+
+        &__horn
+            max-width: 18%
+            &.left
+                display: none
+
+        &__img
+            max-width: 157%
+            transform: translateX(-52%)
+
 .tekenomics
-    padding: 60px 50px
+    padding: 80px 50px 40px
     position: relative
     overflow: hidden
     z-index: 1
-    min-height: 100vh
-    flex-direction: column
+    min-height: 58vw
     &__coins
         position: absolute
         top: 0
@@ -132,7 +207,7 @@
         width: 45%
         height: 88%
         object-fit: contain
-        object-position: center center
+        object-position: center bottom
 
     &-content
         margin: auto auto 0
@@ -140,11 +215,10 @@
         position: relative
         z-index: 1
 
-    &__text 
+    &__text
         display: block
         max-width: 75%
-        margin: 0 auto 
-
+        margin: 0 auto
 
     &__sculp
         position: absolute
@@ -158,3 +232,63 @@
             left: auto
             right: -10%
             object-position: right bottom
+
+    &__palm
+        position: absolute
+        z-index: 1
+        top: 22%
+        left: 0
+        max-width: 17%
+        max-height: 60%
+        object-fit: contain
+        object-position: left bottom
+
+    @media screen and ( max-width: 1000px )
+        padding: 60px 15px 40px
+        min-height: 135vw
+        &__heading
+            width: 75%
+            margin: 0 auto
+
+        &__coins
+            width: 100%
+            z-index: -1
+            right: -5%
+            display: none
+
+        &__palm
+            top: auto 
+            bottom: 43vw
+            max-width: 30%
+
+        &__phunt
+            width: 90vw
+            left: 13vw
+            max-height: 70%
+            z-index: -111
+
+        &-content
+            max-width: 90%
+            display: flex
+            flex-direction: column-reverse
+
+        .contract
+            margin: 20px 0 0
+            font-size: 18px
+            min-height: 55px
+            z-index: 999
+            backdrop-filter: blur(7px)
+
+        &__sculp
+            width: 48%
+
+        &__text
+            max-width: 88%
+            transform: translateX(1vw)
+
+        @keyframes contract
+            0%
+                background-color: rgba(#fff, .14)
+
+            100%
+                background-color: rgba(245, 135, 138, .18)
