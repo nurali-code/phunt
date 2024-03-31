@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phunt</title>
+    <meta name="theme-color" content="#762aa5" />
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <main class="main">
+        <nav class="fx">
+            <a href="#about" title="about"><img src="img/1.png" alt="about"></a>
+            <a href="#tekenomics" title="tekenomics"><img src="img/2.png" alt="tekenomics"></a>
+            <a href="#" target="_blank"><img src="img/3.png" alt="about"></a>
+        </nav>
+
+        <img src="img/main.png" class="main__phunt" alt="Phunt">
+
+        <div class="links fx">
+            <a href="#" target="_blank" title="telegram"><img src="img/tg.png" alt="telegram"></a>
+            <a href="#" target="_blank" title="dex"><img src="img/dex.png" alt="dex"></a>
+            <a href="#" target="_blank" title="twiter"><img src="img/x.png" alt="x"></a>
+        </div>
+
+        <img src="img/palm-l.png" class="main__palm" alt="Phunt">
+        <img src="img/palm-r.png" class="main__palm right" alt="Phunt">
+
+    </main>
+
+    <div class="partners fxb">
+        <img src="img/cmc.png" alt="i">
+        <img src="img/tools.png" alt="i">
+        <img src="img/screener.png" alt="i">
+    </div>
+
+    <div class="about" id="about">
+        <div class="col">
+            <img src="img/about.png" class="about__heading" alt="about" loading="lazy">
+            <p class="about__text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis velit, accusamus expedita, eum nemo
+                ducimus cupiditate placeat cum aperiam quas nulla ratione animi, vel iste assumenda. Itaque earum eius
+                modi!
+            </p>
+        </div>
+
+        <img class="about__img" src="img/killer.png" loading="lazy" alt="killer">
+        <img src="img/horn-l.png" class="about__horn left" alt="i">
+        <img src="img/horn-r.png" class="about__horn right" alt="i">
+    </div>
+
+    <div class="tekenomics fx" id="tekenomics">
+        <img src="img/tknmcs.png" loading="lazy" class="tekenomics__heading" alt="tekenomics">
+        <img src="img/coins.png" loading="lazy" class="tekenomics__coins" alt="i">
+        <img src="img/phunt__fade.png" loading="lazy" class="tekenomics__phunt" alt="i">
+
+
+        <div class="tekenomics-content">
+            <button class="contract"></button>
+            <img src="img/text.png" loading="lazy" class="tekenomics__text" alt="i">
+
+        </div>
+        <img src="img/sculp-l.png" loading="lazy" class="tekenomics__sculp" alt="i">
+        <img src="img/sculp-r.png" loading="lazy" class="tekenomics__sculp right" alt="i">
+    </div>
+
+
+    <script>
+        function copyText() {
+            var button = document.querySelector('.contract');
+            var dataToCopy = button.getAttribute('data-copy');
+            navigator.clipboard.writeText(dataToCopy)
+                .then(function () { alert('Text copied: ' + dataToCopy); })
+                .catch(function (err) { console.error('Failed to copy text:', err); });
+        }
+    </script>
+
+
+</body>
+
+</html>

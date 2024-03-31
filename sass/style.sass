@@ -1,0 +1,159 @@
+@import 'normolize'
+@import 'fonts'
+@import 'elements'
+@import 'header'
+
+.main
+    padding: 20px 50px
+    display: flex
+    flex-direction: column
+    position: relative
+    z-index: 1
+
+    nav
+        gap: 4%
+        a
+            display: block
+            max-width: 15%
+            &:last-child
+                margin-left: auto
+
+    &__phunt
+        max-width: 40%
+        margin: 0 auto
+
+    &__palm
+        position: absolute
+        bottom: 5%
+        left: 0
+        max-width: 18%
+        max-height: 60%
+        object-fit: contain
+        object-position: left bottom
+        &.right
+            left: auto
+            right: 0
+            bottom: 18%
+            object-position: right bottom
+
+    .links
+        max-width: 25%
+        margin: 0 auto
+        gap: 0 2%
+        a
+            display: block
+            border-radius: 10px
+            padding: 12px 10px 8px 15px
+            max-width: 30%
+            img
+                display: block
+
+            &:hover
+                background-color: rgba(228, 150, 190, 0.5)
+
+.partners
+    max-width: 50%
+    margin: 10px auto
+    img
+        display: block
+        max-width: 32%
+        transition: all ease .3s
+        &:hover
+            transform: scale(1.1)
+
+.about
+    padding: 20px 40px 30vw
+    position: relative
+    z-index: 1
+    overflow: hidden
+    .col
+        max-width: 40%
+
+    &__horn
+        position: absolute
+        bottom: 25%
+        left: 0
+        max-width: 10%
+        max-height: 60%
+        object-fit: contain
+        object-position: left bottom
+        &.right
+            left: auto
+            right: 0
+            bottom: auto
+            top: 0
+            object-position: right bottom
+
+    &__text
+        font-size: 1.4vw
+        line-height: 130%
+        font-weight: 700
+        color: #000
+        max-width: 75%
+        margin: 0 0 0 auto
+        position: relative
+        bottom: 5vw
+
+    &__img
+        display: block
+        margin: 0 auto
+        position: absolute
+        bottom: 0
+        width: unset
+        max-width: 110%
+        left: 50%
+        transform: translateX(-50%)
+        z-index: -1
+
+.tekenomics
+    padding: 60px 50px
+    position: relative
+    overflow: hidden
+    z-index: 1
+    min-height: 100vh
+    flex-direction: column
+    &__coins
+        position: absolute
+        top: 0
+        right: -5%
+        max-width: 59%
+        display: block
+
+    &__heading
+        display: block
+        max-width: 50%
+        margin: 0 0 0 auto
+
+    &__phunt
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 45%
+        height: 88%
+        object-fit: contain
+        object-position: center center
+
+    &-content
+        margin: auto auto 0
+        max-width: 45%
+        position: relative
+        z-index: 1
+
+    &__text 
+        display: block
+        max-width: 75%
+        margin: 0 auto 
+
+
+    &__sculp
+        position: absolute
+        bottom: -6%
+        left: -10%
+        width: 32%
+        height: 70%
+        object-fit: contain
+        object-position: left bottom
+        &.right
+            left: auto
+            right: -10%
+            object-position: right bottom

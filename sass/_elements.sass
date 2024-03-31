@@ -1,0 +1,107 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+$prime: #762aa5
+$second: #000
+
+html
+    scroll-behavior: smooth
+
+body
+    min-height: 100vh
+    color: white
+    background-color: #000
+    font-family: 'Berlin', sans-serif
+    background-image: url('../img/bg.jpg')
+    background-repeat: no-repeat
+    background-position: center top
+    background-size: cover
+
+img
+    max-width: 100%
+
+a,
+button
+    display: inline-block
+    text-decoration: none
+    transition: all ease .2s
+    background-color: transparent
+    &:active
+        transform: scale(.98)
+
+    img
+        display: block
+
+    &:hover
+        transform: scale(1.1)
+
+.btn
+
+    display: block
+    font-size: 0
+    max-width: 320px
+    position: relative
+    z-index: 1
+
+    img
+        display: block
+
+    &.img
+        padding-right: 98px
+        width: 28vw
+        max-width: 420px
+
+    &__side
+        position: absolute
+        top: 50%
+        transform: translateY(-55%)
+        max-height: 147%
+        right: 0
+
+.fx, .fxb
+    display: flex
+    align-items: center
+
+.fxb
+    justify-content: space-between
+
+.contract
+
+    font-size: 24px
+    font-style: normal
+    font-weight: 700
+    line-height: 150%
+    text-align: center
+    // color: rgb(245 135 138)
+    color: #fff
+
+    display: block
+    width: 100%
+    max-width: 100%
+    min-height: 55px
+    padding: 12px 22px
+    border-radius: 40px
+    margin: 0 auto 40px
+
+    border: 2px solid rgb(245 135 138)
+    background-color: rgba(#fff, .05)
+    backdrop-filter: blur(5px)
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    img
+        width: 22px
+        display: inline-block
+        vertical-align: middle
+        margin-left: 10px
+        position: absolute
+        right: 22px
+        top: 50%
+        transform: translateY(-50%)
+
+    &[data-copy]
+        padding: 14px 62px 14px 22px
