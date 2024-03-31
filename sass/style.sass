@@ -105,7 +105,9 @@
         max-width: 32%
         transition: all ease .3s
         &:hover
-            transform: scale(1.1)
+            transition-duration: .3s !important
+            animation-delay: 0 !important
+            transform: scale(1.1) !important
 
     @media screen and ( max-width: 1000px )
         flex-wrap: wrap
@@ -169,7 +171,8 @@
         // min-height: 100vh
 
         &__heading
-            transform: rotateZ(27deg) translate(-3vw, 4vw)
+            img
+                transform: rotateZ(27deg) translate(-3vw, 4vw)
 
         .col
             width: 100%
@@ -214,7 +217,7 @@
         bottom: 0
         left: 0
         width: 44%
-        height: 88%
+        height: 85%
         object-fit: contain
         object-position: center bottom
 

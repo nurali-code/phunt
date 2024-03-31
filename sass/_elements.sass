@@ -36,10 +36,6 @@ button
     img
         display: block
 
-    &:hover
-        animation-delay: 0 
-        transform: scale(1.1) 
-
 .btn
 
     display: block
@@ -114,9 +110,14 @@ button
     &[data-copy]
         padding: 14px 62px 14px 22px
 
+    &:hover
+        transition-duration: .3s !important
+        animation-delay: 0 !important
+        transform: scale(1.1) !important
+
 @keyframes contract
     0%
         background-color: rgba(#fff, .05)
 
     100%
-        background-color: rgba(245, 135, 138, .1)
+        background-color: rgba(245, 135, 138, .11)
